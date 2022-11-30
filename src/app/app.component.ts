@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private toastController: ToastController) {}
+  
+  async presentToast(position: 'bottom') {
+    const toast = await this.toastController.create({
+      message: 'Account created!',
+      duration: 1600,
+      position: position
+    });
+
+    await toast.present();
+  }
 }
