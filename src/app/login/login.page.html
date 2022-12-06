@@ -1,5 +1,3 @@
-
-     
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -26,8 +24,8 @@
       <ion-label position="floating">Password</ion-label>
       <ion-input type="password" formControlName='password'></ion-input>
     </ion-item>
-    <ion-button color="dark" size="full" [disabled]="!form.valid">Login</ion-button>
-    <ion-button color="medium" size="full">Continue without login</ion-button>
+    <ion-button [routerLink]="['/my-recipes-page']" color="dark" size="full" [disabled]="!form.valid">Login</ion-button>
+    <ion-button [routerLink]="['/recipes']" color="medium" size="full">Continue without login</ion-button>
     <ion-button [routerLink]="['/forgot-password']" color="dark" fill="clear" size="full">Forgot password?</ion-button>
     <ion-button [routerLink]="['/createaccount']" color="dark" fill="clear" size="full"><b>Create an account</b></ion-button>
   </ion-card-content>

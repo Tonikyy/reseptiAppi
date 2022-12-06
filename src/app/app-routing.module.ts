@@ -2,10 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'tabs',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
+
   {
     path: '',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
@@ -21,6 +18,30 @@ const routes: Routes = [
   {
     path: 'createaccount',
     loadChildren: () => import('./createaccount/createaccount.module').then( m => m.CreateaccountPageModule)
+  },
+  {
+    path: 'recipes',
+    loadChildren: () => import('./recipes/recipes.module').then( m => m.RecipesPageModule)
+  },
+  {
+    path: 'recipe-details-page',
+    loadChildren: () => import('./recipe-details-page/recipe-details-page.module').then( m => m.RecipeDetailsPagePageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'my-recipes-page',
+    loadChildren: () => import('./my-recipes-page/my-recipes-page.module').then( m => m.MyRecipesPagePageModule)
   },
 ];
 @NgModule({
